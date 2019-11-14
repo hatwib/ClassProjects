@@ -1,0 +1,308 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget32"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/widget39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Path Finder"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/widget41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/widget40"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/bg"
+            tools:ignore="ContentDescription" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white00"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white01"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white02"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white03"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="203dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white04"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white10"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="71dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white11"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="71dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white12"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="71dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white13"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="203dp"
+            android:layout_marginTop="71dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white14"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="71dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white20"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="136dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white21"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="136dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white22"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="136dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white23"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="203dp"
+            android:layout_marginTop="136dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white24"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="136dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white30"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="198dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white31"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="198dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white32"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="198dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white33"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="203dp"
+            android:layout_marginTop="198dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white34"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="198dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white40"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="262dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white41"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="262dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white42"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="262dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white43"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="203dp"
+            android:layout_marginTop="262dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+
+        <com.hatwib.mygame.Box
+            android:id="@+id/white44"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="262dp"
+            android:clickable="true"
+            android:src="@drawable/white" />
+    </RelativeLayout>
+
+    <TableRow
+        android:id="@+id/widget48"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/widget51"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Pick box" />
+
+        <Button
+            android:id="@+id/widget52"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Find path" />
+
+        <Button
+            android:id="@+id/widget53"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Refresh" />
+    </TableRow>
+
+</TableLayout>

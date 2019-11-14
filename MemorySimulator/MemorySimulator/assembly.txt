@@ -1,0 +1,12 @@
+#1 = 25
+#2 = 4
+#3 = 0
+#4 = 0
+#15 = 100
+#100 = asm
+SET R4,0
+ADD R3,R3,R1
+SUB R4,R2,R2
+NOT R4,R2
+ADDI R4,R4,1
+DECIN R15,4,R4

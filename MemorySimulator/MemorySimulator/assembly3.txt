@@ -1,0 +1,13 @@
+#1 = 124 // INSERT RECORDS
+#2 = 4
+#3 = 0
+#4 = 0
+#15 = 100
+#100 = asm
+SET R3,0//testing comment 100
+SET R4,0//testing comment 101
+SUB R1,R1,R2//testing comment 102
+DECIN R15,3,R1 //103 if negative, move to add R4, r1,r2
+ADDI R3,R3,1 //104
+SUBI R15,R15,3 //105
+ADD R4,R1,R2 //106

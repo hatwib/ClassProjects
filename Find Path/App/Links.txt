@@ -1,0 +1,3 @@
+http://www.vogella.com/articles/JavaAlgorithmsDijkstra/article.html
+
+http://www.algolist.com/code/java/Dijkstra's_algorithm

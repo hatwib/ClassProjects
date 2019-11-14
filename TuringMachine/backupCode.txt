@@ -1,0 +1,220 @@
+select s.Name, t.Grade
+from students s, take t
+where s.sid = t.sid and t.Grade > 3;
+
+select t.Grade
+from students s, take t
+order by (t.Grade + t.ProfessorEval) / 2 asc;
+
+select s.Name
+from students s, (select * from take) t
+where s.sid = t.sid and t.DeptName = 'Education' and t.CourseNum = 101;
+
+select distinct c.CourseName
+from courses c, prereq p, take t, students s
+where s.sid = t.sid and not exists (select * from prereq p where p.CourseNum = c.CourseNum);
+
+select c.CourseName
+from courses c
+where exists (select * from prereq p where p.CourseNum = c.CourseNum);
+
+
+
+
+ import java.awt.BorderLayout;
+ import java.awt.Dimension;
+ import java.awt.Toolkit;
+ import java.awt.event.WindowAdapter;
+ import java.awt.event.WindowEvent;
+ import java.io.BufferedReader;
+ import java.io.FileNotFoundException;
+ import java.io.FileReader;
+ import java.io.IOException;
+ import java.io.InputStreamReader;
+ import java.util.StringTokenizer;
+ 
+ import javax.swing.AbstractButton;
+ import javax.swing.JButton;
+ import javax.swing.JFrame;
+ import javax.swing.JPanel;
+ import javax.swing.JScrollPane;
+ import javax.swing.JTextArea;
+ 
+ public class Turing {
+ 	public static void main(String[] args) {
+ 
+ 
+ 		JFrame f = new JFrame();
+ 		JTextArea TapeP;
+ 		JTextArea TapeQ;
+ 		JTextArea TapeT;
+ 		JButton NextButton, LoadButton;
+ 		JScrollPane vertical1,vertical2,vertical3;
+ 
+ 		
+ 		f = new JFrame("Single Scalar Micro Processor");
+ 		Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
+ 		Dimension frameSize=new Dimension((int)(screenSize.width),(int)(screenSize.height));
+ 
+ 		f.setBounds(0,0,frameSize.width,frameSize.height);
+ 		JPanel upperPanel = new JPanel();
+ 		upperPanel.setLayout(new BorderLayout(10,20));
+ 		JPanel middlePanel = new JPanel();
+ 
+ 		TapeP=new JTextArea("TopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTopTop", 1, 100);
+ 		TapeP.setLineWrap(false);
+ 		TapeP.setEditable(false);
+ 
+ 		TapeQ=new JTextArea("", 1, 100);
+ 		TapeQ.setLineWrap(false);
+ 		TapeQ.setEditable(false);
+ 
+ 		TapeT=new JTextArea("", 1, 100);
+ 		TapeT.setLineWrap(false);
+ 		TapeT.setEditable(false);
+ 
+ 		NextButton = new JButton("Next Step");
+ 		NextButton.setVerticalTextPosition(AbstractButton.CENTER);
+ 		NextButton.setHorizontalTextPosition(AbstractButton.LEADING);
+ 
+ 		LoadButton = new JButton("Load File");
+ 		LoadButton.setVerticalTextPosition(AbstractButton.CENTER);
+ 		LoadButton.setHorizontalTextPosition(AbstractButton.LEADING);
+ 		
+ 		vertical1 = new JScrollPane(TapeP,JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+ 		upperPanel.add(vertical1, BorderLayout.NORTH);
+ 
+ 		vertical2 = new JScrollPane(TapeQ,JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+ 		upperPanel.add(vertical2, BorderLayout.CENTER);
+ 
+ 		vertical3 = new JScrollPane(TapeT,JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+ 		upperPanel.add(vertical3, BorderLayout.SOUTH);
+ 		
+ 		middlePanel.add(NextButton);
+ 		middlePanel.add(LoadButton);
+ 		
+ 		f.getContentPane().add(upperPanel, BorderLayout.NORTH);
+ 		f.getContentPane().add(middlePanel);
+ 		
+ 		f.addWindowListener(new WindowAdapter() {
+ 			public void windowClosing(WindowEvent ev) {
+ 				System.exit(0);
+ 			}
+ 		});
+ 		
+ 		f.pack();
+ 		f.setLocationRelativeTo(null);
+ 		f.setVisible(true);
+ 		
+ 		BufferedReader br = null;
+ 		String line,input="",transaction="",inputKey="",inputText="",initialValue="",s="";
+ 		String fileContent = "",finalValue="";
+ 		String currentStateAndInputValue="";
+ 		char inputValue[]; 
+ 		String outValue[];
+ 		int i=0,n=1;
+ 		BufferedReader reader;
+ 		
+ 		try {
+ 			br = new BufferedReader(new FileReader("inputFile.txt"));
+ 			
+ 			while((line = br.readLine()) != null){
+ 				 fileContent  += line + "\n";
+ 			}
+ 			
+ //			reader = new BufferedReader(new InputStreamReader(System.in));
+ 			System.out.println("\nSelect Print Options\n"+
+ 						"1 - Step Display\n" +
+ 						"2 - One-Execution\n" +
+ 						"Anything else - Exit\n");
+ //			s = reader.readLine();
+ 			
+ //			if(s.trim().equals("1"))
+ //				n = 1;
+ //			else if(s.trim().equals("2"))
+ //				n = 2;
+ //			else
+ //				return;
+ 			
+ 			System.out.println("File values are: " +fileContent +"\n");
+ 			
+ 			StringTokenizer fileContentToken = new StringTokenizer(fileContent,"\n");
+ 			input = fileContentToken.nextToken();
+ 			initialValue = fileContentToken.nextToken();
+ 			input = fileContentToken.nextToken();
+ 			input = fileContentToken.nextToken();
+ 			System.out.println("input is --->" +input);
+ 			inputValue = input.toCharArray();
+ 			input = fileContentToken.nextToken();
+ 			while(fileContentToken.hasMoreTokens() ){ // && inputValue.length > i){ // Check is input length has reached maximum
+ 				 transaction = fileContentToken.nextToken();
+ 				 if(inputValue.length == i){
+ 						finalValue = String.copyValueOf(inputValue);
+ 						finalValue += "_";
+ 						inputValue = finalValue.toCharArray();
+ 					}
+ 				 else if(i < 0){
+ 					 finalValue = String.copyValueOf(inputValue);
+ 					 finalValue = "_"+finalValue;
+ 					 inputValue = finalValue.toCharArray();
+ 					 i=0;
+ 				 }
+ 				 currentStateAndInputValue = "d["+initialValue+","+inputValue[i]+"]";
+ 				 StringTokenizer inputToken = new StringTokenizer(transaction,"=");
+ 				while (inputToken.hasMoreTokens()){
+ 					inputKey = inputToken.nextToken(); // Get input key d[0,0]
+ 					inputText = inputToken.nextToken(); // Get input text (1,0,R);
+ 					if(currentStateAndInputValue.trim().equals(inputKey.trim())){ 
+ 						if(n == 1)
+ 						try {
+ 							Thread.sleep(100);
+ 						} catch (InterruptedException e) {
+ 							// TODO Auto-generated catch block
+ 							e.printStackTrace();
+ 						}
+ //						if(n == 1) 
+ //							System.out.println("transaction state is --->" +transaction );					
+ 						
+ //						if(n == 1) 
+ //							System.out.println("out value is-->"+ String.copyValueOf(inputValue) );
+ 							
+ 						System.out.print("index "+i+"-->"+ transaction );							
+ 						outValue = inputText.replace("(", "").replace(");", "").trim().split(",");
+ 						initialValue = outValue[0];
+ 						System.out.print("--> " + String.copyValueOf(inputValue));
+ 						if(outValue[2].equals("R")){
+ 							inputValue[i] =  outValue[1].charAt(0);
+ 							i++;
+ 						}else{
+ 							inputValue[i] =  outValue[1].charAt(0);
+ 							i--;
+ 						}
+ 						System.out.print("--> " + String.copyValueOf(inputValue)+"\n");
+ 						fileContentToken = new StringTokenizer(fileContent,"\n"); // Reset Instruction Count
+ 					    for( int j = 0; j < 5; j++ ) {
+ 						  transaction = fileContentToken.nextToken();
+ 					    }
+ 					    
+ 						if(initialValue.trim().equals("h")){
+ 							break;
+ 						}
+ 
+ 						}
+ 					}
+ 				}
+ 			System.out.println("\nfinal value is --->" + String.copyValueOf(inputValue));	
+ 			br.close();
+ 			
+ 
+ 		} catch (FileNotFoundException e) {
+ 			// TODO Auto-generated catch block
+ 			e.printStackTrace();
+ 		} catch (IOException e) {
+ 			// TODO Auto-generated catch block
+ 			e.printStackTrace();
+ 		}
+ 
+ 	}
+ 
+ }
+ 

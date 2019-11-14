@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+<style name="BarrowStyle">
+    <item name="android:layout_gravity">top</item>
+    <item name="android:layout_width">78dp</item>
+   	<item name="android:layout_height">78dp</item>
+    <item name="android:layout_marginLeft">25dp</item>
+   	<item name="android:layout_marginTop">25dp</item>
+   	<item name="android:src">@drawable/barrow1</item>
+</style>
+    
+<style name="BeadStyle">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:layout_marginLeft">7dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:src">@drawable/bead2</item>
+</style>
+</resources>
